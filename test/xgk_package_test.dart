@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:xgk_package/xgk_package.dart';
+import 'package:xgk_package/weui.dart';
 
 void main() {
   test('adds one to input values', () {

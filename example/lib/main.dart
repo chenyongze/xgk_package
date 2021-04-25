@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xgk_package/abc.dart';
 import 'package:xgk_package/xgk_package.dart';
 
 void main() {
@@ -61,12 +62,26 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: XgkPackage(
-          text: "xxx",
-        ),
+      body: Column(
+        children: [
+          Abc(),
+          Center(
+            // Center is a layout widget. It takes a single child and positions it
+            // in the middle of the parent.
+            child: XgkPackage(
+              text: 'Shaded Text',
+              textColor: Color(0xffff0000),
+              shadeColor: Color(0xff00ff00),
+              shadeBuilder: (BuildContext context, String text, Color color) =>
+                  Container(
+                child: Text(
+                  text,
+                  style: TextStyle(color: color),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

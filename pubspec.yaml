@@ -1,7 +1,7 @@
 name: xgk_package
 description: A new Flutter package project.
-version: 0.0.1
-#author:
+version: 0.0.2
+author: yongze.chen
 homepage: https://github.com/chenyongze/xgk_package
 
 environment:
